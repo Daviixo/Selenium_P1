@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2022-07-14 20:13:07</p>
+                <p class='attribute'><strong>Duration: </strong>73.22 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 4, Pass: 3, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>assertions.AssertionsTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_language_option</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>
+Searching the Select language dropdown
+</p><p style="color:maroon;">TypeError: catching classes that do not inherit from BaseException is not allowed</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\davii\Documents\Selenium_P1\Test eStore\assertions.py", line 36, in is_element_present
+    self.driver.find_element(by=how, value=what)
+  File "C:\Users\davii\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 857, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\davii\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 435, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\davii\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="iselect-language"]"}
+  (Session info: chrome=103.0.5060.114)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00246463+2188387]
+	Ordinal0 [0x001DE461+1762401]
+	Ordinal0 [0x000F3D78+802168]
+	Ordinal0 [0x00121880+989312]
+	Ordinal0 [0x00121B1B+989979]
+	Ordinal0 [0x0014E912+1173778]
+	Ordinal0 [0x0013C824+1099812]
+	Ordinal0 [0x0014CC22+1166370]
+	Ordinal0 [0x0013C5F6+1099254]
+	Ordinal0 [0x00116BE0+945120]
+	Ordinal0 [0x00117AD6+948950]
+	GetHandleVerifier [0x004E71F2+2712546]
+	GetHandleVerifier [0x004D886D+2652765]
+	GetHandleVerifier [0x002D002A+520730]
+	GetHandleVerifier [0x002CEE06+516086]
+	Ordinal0 [0x001E468B+1787531]
+	Ordinal0 [0x001E8E88+1805960]
+	Ordinal0 [0x001E8F75+1806197]
+	Ordinal0 [0x001F1DF1+1842673]
+	BaseThreadInitThunk [0x775BFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x778C7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x778C7A6E+238]
+	(No symbol) [0x00000000]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\davii\Documents\Selenium_P1\Test eStore\assertions.py", line 26, in test_language_option
+    self.assertTrue(self.is_element_present(By.ID, 'iselect-language'))
+  File "C:\Users\davii\Documents\Selenium_P1\Test eStore\assertions.py", line 37, in is_element_present
+    except NoSuchElementException():
+TypeError: catching classes that do not inherit from BaseException is not allowed
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_search_field</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>
+Searching the search bar
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 1, Error: 1 -- Duration: 50.49 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>searchtests.SearchTests</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_search_salt_shaker</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>
+2nd Test: Search Salt Shaker -- START --
+2nd Test: Search Salt Shaker -- END --
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_search_tee</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>
+1st Test: Search Tee -- START --
+1st Test: Search Tee -- END --
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 2 -- Duration: 22.73 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
