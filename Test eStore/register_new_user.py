@@ -59,7 +59,7 @@ class AssertionsTest(unittest.TestCase):
 		lets_wait
 		last_name.send_keys('Test')
 		lets_wait
-		email_address.send_keys('test3419@test.com')
+		email_address.send_keys('test3419123@test.com')
 		lets_wait
 		password.send_keys('Test123123')
 		lets_wait
