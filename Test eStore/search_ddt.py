@@ -17,14 +17,14 @@ def get_data(file):
     return rows
 
 @ddt
-class nameGoesHere(unittest.TestCase):
+class SearchDDT(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
         driver = self.driver
         driver.implicitly_wait(30)
         driver.maximize_window()
-        driver.get("https://demo-store.seleniumacademy.com/")
+        driver.get("http://demo-store.seleniumacademy.com/")
 
     @data(*get_data("testdata.csv"))
     @unpack
@@ -38,14 +38,19 @@ class nameGoesHere(unittest.TestCase):
 
         products = driver.find_elements(By.XPATH, '//h2[@class="product-name"]/a')
 
+        #XPATH for NO RESULTS => $x('//div[2]/div/p[@class="note-msg"]/text()').map(x => x.wholeText)
+
         expected_count = int(expected_count)
 
-        if expected_count > 0:
+        if len(products) > 0:
             self.assertEqual(expected_count, len(products))
         else:
-            msg = self.driver.find_element(By.CLASS_NAME,'note-msg')
+            msg = self.driver.find_element(By.XPATH,'//div[2]/div/p[@class="note-msg"]').text
+            #print(f'This is msg: {msg}')
             self.assertEqual('Your search returns no results.', msg)
-        print(f'Find {len(products)} products')
+            print(f'No results found :c Check if there is a typo for {search_value}!\n')
+
+        print(f'Completed: We found {len(products)} products!')
         
 
     def tearDown(self):
