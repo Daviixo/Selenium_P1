@@ -46,11 +46,10 @@ class SearchDDT(unittest.TestCase):
             self.assertEqual(expected_count, len(products))
         else:
             msg = self.driver.find_element(By.XPATH,'//div[2]/div/p[@class="note-msg"]').text
-            #print(f'This is msg: {msg}')
             self.assertEqual('Your search returns no results.', msg)
             print(f'No results found :c Check if there is a typo for {search_value}!\n')
 
-        print(f'Completed: We found {len(products)} products!')
+        print(f'Completed: We found {len(products)} products!\n')
         
 
     def tearDown(self):
