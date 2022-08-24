@@ -15,6 +15,10 @@ class MercadoLibreTest(unittest.TestCase):
         driver.maximize_window()
         driver.get("https://mercadolibre.com/")
 
+        #If using MacOS, this solves the issue of MAX the chrome window.
+        sleep(2)
+        driver.maximize_window()
+
     def test_get_ps5_prices(self):
         driver = self.driver
         
@@ -26,21 +30,21 @@ class MercadoLibreTest(unittest.TestCase):
         search_field.clear()
         search_field.send_keys('playstation 5')
         search_field.submit()
-        sleep(3)
+        sleep(1)
 
         #Full XPATH for Guatemala => $x('//div[4]/ul/li/a/span[contains(text(),"Guatemala")]/text()').map(x => x.wholeText)
 
         location = driver.find_element(By.XPATH, '//div[4]/ul/li/a/span[contains(text(),"Guatemala")]')
         location.click()
-        sleep(3)
+        sleep(1)
 
         sort_by = driver.find_element(By.CLASS_NAME, 'andes-dropdown__display-values')
         sort_by.click()
-        sleep(3)
+        sleep(1)
 
         higher_price = driver.find_element(By.CSS_SELECTOR, '#andes-dropdown-más-relevantes-list-option-price_desc > div > div > span')
         higher_price.click()
-        sleep(3)
+        sleep(1)
 
         #Articles XPATH = $x('//div[2]/section/ol/li[1]/div/div/div[2]/div/a/h2/text()').map(x => x.wholeText)
 
