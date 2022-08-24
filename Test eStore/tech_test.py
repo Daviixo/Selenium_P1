@@ -1,4 +1,3 @@
-from msilib.schema import Condition
 from time import sleep
 from prettytable import PrettyTable
 import unittest
