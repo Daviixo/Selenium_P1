@@ -3,7 +3,7 @@ from pyunitreport import HTMLTestRunner
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-
+from time import sleep
 
 class LastPass(unittest.TestCase):
 
@@ -17,7 +17,8 @@ class LastPass(unittest.TestCase):
         print("-- Page 1 process --")
         driver = self.driver
         driver.maximize_window()
-        driver.get('https://www.lastpass.com/')
+        driver.get('https://support.lastpass.com/')
+        sleep(5)
         print("Website loading with no problem.")
 
 

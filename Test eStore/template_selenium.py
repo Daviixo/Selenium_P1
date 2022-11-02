@@ -13,7 +13,7 @@ class nameGoesHere(unittest.TestCase):
         driver.maximize_window()
         driver.get("google.com")
 
-    def test_compare_products_removal_alert(self):
+    def test_xxx(self):
         driver = self.driver
         
 
